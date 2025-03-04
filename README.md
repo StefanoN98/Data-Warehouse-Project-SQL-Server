@@ -14,40 +14,31 @@ The project adheres to the Medallion Architecture, which consists of three layer
 ### 🟤 1. Bronze Layer (Raw Data)
 
 - 📂 Stores raw data as received from source systems (CRM, ERP) in CSV format.
-
--  ❌ No transformation is applied.
-
+- ❌ No transformation is applied.
 - 📌 Data is loaded using batch processing with full load and truncate & insert strategies.
-
 - 📊 Object Type: Tables. 
 
 
 ### ⚪ 2. Silver Layer (Cleaned, Standardized Data)
 
 - 🧹 Cleanses and standardizes raw data for consistency and quality.
-
 - 🔍 Performs data cleansing, normalization, derived columns, and enrichment.
-
 - 📌 Data is still stored in tables.
-
 - ⚙ Uses batch processing for loading.
 
 
 ### 🟡 3. Gold Layer (Business-Ready Data)
 
 - 💡 Provides transformed data optimized for analytics and reporting.
-
 - 🔄 Applies data integration, aggregation, and business logic.
-
 - 📌 Data is stored as views rather than tables.
-
 - 📊 Supports multiple data models:
 
-    🌟 Star Schema
+    1. 🌟 Star Schema
   
-    📑 Flat Table
+    2. 📑 Flat Table
   
-    📈 Aggregated Table
+  3. 📈 Aggregated Table
 
 ---
 
@@ -58,15 +49,13 @@ The project adheres to the Medallion Architecture, which consists of three layer
 2.🔄 Transform:
 
 - 🟤 Bronze: No transformation (raw data storage).
-
 - ⚪ Silver: Cleansing, standardization, and enrichment.
-
 - 🟡 Gold: Aggregations and business logic applied.
 
 3.📤 Load:
 
-- 🟤 Bronze and ⚪ Silver layers use batch processing.
-
+- 🟤 Bronze layers use batch processing.
+- ⚪ Silver layers use batch processing.
 - 🟡 Gold layer uses views for optimized data retrieval.
   
 ---
