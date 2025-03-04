@@ -4,6 +4,8 @@
 
 This project focuses on building a Data Warehouse (DWH) using SQL Server, implementing ETL (Extract, Transform, Load) processes to handle structured data from CSV sources. The architecture follows the Medallion approach (Bronze, Silver, and Gold layers) to ensure data is efficiently ingested, cleaned, transformed, and optimized for analytical consumption.
 
+---
+
 ## 🏗 Architecture
 
 The project adheres to the Medallion Architecture, which consists of three layers:
@@ -47,6 +49,7 @@ The project adheres to the Medallion Architecture, which consists of three layer
   
     📈 Aggregated Table
 
+---
 
 ## 🔄 Data Flow
 
@@ -66,16 +69,19 @@ The project adheres to the Medallion Architecture, which consists of three layer
 
 - 🟡 Gold layer uses views for optimized data retrieval.
   
+---
 
 ## 🛠 Technologies Used
 
 🗄 SQL Server for data storage and processing.
 
-
+---
 
 ## 🤝 Contribution
 
 Feel free to contribute by submitting issues, feature requests, or pull requests. Let's build a robust data warehouse together! 🚀
+
+---
 
 ## 📜 License
 
