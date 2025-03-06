@@ -1,0 +1,15 @@
+In this folder in all the 6 scripts I did all the modification, cleaning of the data from the bronze layer tables
+and then I applied the INSERT INTO step to popolate the tables in the silver layer.
+
+So each script follows this path :
+- List of cleansing to with analysis, test and solution
+
+- Each cleansing contains in the query also the previous cleansing:
+    for example step 1 remove duplicates --> query to remove duplicates
+                step 2 handle missing values --> query to handle missing values + remove duplicates
+                step 3 standardization --> query stardadization +  handle missing values + remove duplicates
+    This allows to have in the last step the complete query with all the modification
+
+- INSERT INTO command with the last query 
+
+              
