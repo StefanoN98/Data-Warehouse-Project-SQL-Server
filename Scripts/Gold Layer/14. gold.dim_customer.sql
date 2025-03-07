@@ -1,5 +1,5 @@
 /*===============================================================================
-DDL Script: Create Gold Views -->Create Dimension: gold.dim_customers
+DDL Script: Create Gold Views -->Create Dimension: gold.dim_customer
 ===============================================================================*/
 
 /*Step 1 : choose the columns I want to keep from silver.crm_cust_info
