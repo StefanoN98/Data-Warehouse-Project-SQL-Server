@@ -62,7 +62,7 @@ BEGIN
 			   END cst_marital_status, --Column Replace Values to a more readable format
 	   
 			   CASE WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
-					WHEN UPPER(TRIM(cst_gndr)) = 'FìM' THEN 'Male'
+					WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
 					ELSE 'n/a'  
 			   END cst_gndr, --Column Replace Values to a more readable format
 			   cst_create_date
