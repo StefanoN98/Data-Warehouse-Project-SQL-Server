@@ -8,12 +8,10 @@ This project focuses on building a Data Warehouse (DWH) using SQL Server, implem
 
 ## 📖 Project
 
-This project involves:
-
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+1. 🏛**Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. ⚙️**ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+3. 🛠️**Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+4. 📈**Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
 
 ---
 
@@ -49,7 +47,7 @@ The project adheres to the Medallion Architecture, which consists of three layer
 
 ---
 
-## 🏗 ETL Pipeline
+## ⚙️ ETL Pipeline
 
 During the ETL process I retrieved data from the source loading directly in the bronze layer as table, then I applied various transformation and load in the silver layer always as table and to conclude I create view in the gold layer identifying dim and fact.
 
@@ -58,7 +56,7 @@ During the ETL process I retrieved data from the source loading directly in the 
 
 ---
 
-## 🏗 Data Modeling
+## 🛠️ Data Modeling
 
 After the identification of dim and fact object I create the relationshio between them using the identified surrogate key.
 
@@ -66,12 +64,12 @@ After the identification of dim and fact object I create the relationshio betwee
 
 ---
 
-## 🛠 Technologies Used
+## 🔧 Technologies Used
 
-📂 Datasets: Access to the project dataset (CSV files).
-🗄 SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
-🐙 Git Repository: Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-📊 DrawIO: Design data architecture, models, flows, and diagrams.
+- 📂 Datasets: Access to the project dataset (CSV files).
+- 🗄 SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
+- 🐙 Git Repository: Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
+- 📊 DrawIO: Design data architecture, models, flows, and diagrams.
 
 
 ---
