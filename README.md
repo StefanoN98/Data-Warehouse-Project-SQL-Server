@@ -6,9 +6,22 @@ This project focuses on building a Data Warehouse (DWH) using SQL Server, implem
 
 ---
 
-## 🏗 Architecture
+## 📖 Project
+
+This project involves:
+
+1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+
+---
+
+## 🏗 Data Architecture
 
 The project adheres to the Medallion Architecture, which consists of three layers:
+
+![Image Alt](https://github.com/StefanoN98/Data-Warehouse-Project-SQL-Server/blob/main/Docs/DWH%20Architecture%20.png?raw=true)
 
 
 ### 🟤 1. Bronze Layer (Raw Data)
@@ -24,7 +37,7 @@ The project adheres to the Medallion Architecture, which consists of three layer
 - 🧹 Cleanses and standardizes raw data for consistency and quality.
 - 🔍 Performs data cleansing, normalization, derived columns, and enrichment.
 - 📌 Data is still stored in tables.
-- ⚙ Uses batch processing for loading.
+- ⚙ Uses batch processing for loading (stored procedure).
 
 
 ### 🟡 3. Gold Layer (Business-Ready Data)
@@ -32,43 +45,26 @@ The project adheres to the Medallion Architecture, which consists of three layer
 - 💡 Provides transformed data optimized for analytics and reporting.
 - 🔄 Applies data integration, aggregation, and business logic.
 - 📌 Data is stored as views rather than tables.
-- 📊 Supports multiple data models:
-
-    1. 🌟 Star Schema
-  
-    2. 📑 Flat Table
-  
-  3. 📈 Aggregated Table
+- 🌟 Implements  Star Schema model
 
 ---
 
-## 🔄 Data Flow
+## 🏗 ETL Pipeline
 
-1.📥 Extract: Data is ingested from CSV files located in designated folders.
+During the ETL process I retrieved data from the source loading directly in the bronze layer as table, then I applied various transformation and load in the silver layer always as table and to conclude I create view in the gold layer identifying dim and fact.
 
-2.🔄 Transform:
+![Image Alt](https://github.com/StefanoN98/Data-Warehouse-Project-SQL-Server/blob/main/Docs/Data%20Flow%20Diagram%20.png?raw=true
+)
 
-- 🟤 Bronze: No transformation (raw data storage).
-- ⚪ Silver: Cleansing, standardization, and enrichment.
-- 🟡 Gold: Aggregations and business logic applied.
-
-3.📤 Load:
-
-- 🟤 Bronze layers use batch processing.
-- ⚪ Silver layers use batch processing.
-- 🟡 Gold layer uses views for optimized data retrieval.
-  
 ---
 
 ## 🛠 Technologies Used
 
-🗄 SQL Server for data storage and processing.
+📂 Datasets: Access to the project dataset (CSV files).
+🗄 SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
+🐙 Git Repository: Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
+📊 DrawIO: Design data architecture, models, flows, and diagrams.
 
----
-
-## 🤝 Contribution
-
-Feel free to contribute by submitting issues, feature requests, or pull requests. Let's build a robust data warehouse together! 🚀
 
 ---
 
