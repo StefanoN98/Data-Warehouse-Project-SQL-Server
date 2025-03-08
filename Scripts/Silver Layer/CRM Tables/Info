@@ -1,4 +1,4 @@
-In this folder in all the 6 scripts I did all the modification, cleaning of the data from the bronze layer tables
+In this folder in all the 3 CRM scripts I did all the modification, cleaning of the data from the bronze layer tables
 and then I applied the INSERT INTO step to popolate the tables in the silver layer.
 
 So each script follows this path :
