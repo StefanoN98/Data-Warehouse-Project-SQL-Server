@@ -58,6 +58,14 @@ During the ETL process I retrieved data from the source loading directly in the 
 
 ---
 
+## 🏗 Data Modeling
+
+After the identification of dim and fact object I create the relationshio between them using the identified surrogate key.
+
+![Image Alt](https://github.com/StefanoN98/Data-Warehouse-Project-SQL-Server/blob/dee6e94f1c0d899b7fbfbf42e00a1d08eea6d1f8/Docs/Star%20Schema%20Gold%20Layer.png)
+
+---
+
 ## 🛠 Technologies Used
 
 📂 Datasets: Access to the project dataset (CSV files).
