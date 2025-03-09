@@ -114,6 +114,9 @@ DDL Script: Create Gold Views --> Create Dimension: gold.dim_product
 ----------------------------------------------------------------------------
 
 --6): Create the object (view)
+IF OBJECT_ID('gold.dim_product', 'V') IS NOT NULL
+    DROP VIEW gold.dim_product;
+GO
 CREATE VIEW gold.dim_product AS
 	SELECT ROW_NUMBER() OVER (ORDER BY pn.prd_start_dt,pn.prd_id) AS product_key,
 		   pn.prd_id AS product_id,
@@ -132,6 +135,7 @@ CREATE VIEW gold.dim_product AS
 	LEFT JOIN silver.erp_px_cat_g1v2 AS pc
 	ON pn.cat_id = pc.id
 	WHERE prd_end_dt IS NULL --Filter out all historical data
+GO
 
 ----------------------------------------------------------------------------
 
