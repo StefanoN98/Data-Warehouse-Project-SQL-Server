@@ -61,6 +61,9 @@ FROM silver.crm_sales_details sd
 ---------------------------------------------------------------------
 
 --3) Create the object (view)
+IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
+    DROP VIEW gold.fact_sales;
+GO
 	CREATE VIEW gold.fact_sales AS
 	SELECT sd.sls_ord_num AS order_number,
 		   pr.product_number, --that replace sd.sls_prd_key
@@ -76,6 +79,7 @@ FROM silver.crm_sales_details sd
 	ON sd.sls_prd_key = pr.product_number
 	LEFT JOIN gold.dim_customer cu
 	ON sd.sls_cust_id = cu.customer_id
+GO
 
 ---------------------------------------------------------------------
 
