@@ -12,22 +12,20 @@
 📌 **Exploratory Data Analysis (EDA)** is the process of understanding a dataset and extracting insights by analyzing its structure, patterns, and relationships.  
 
 📊 **In this project:**  
-✅ Explored database objects, dimensions, and measures  
-✅ Analyze key business metrics using SQL  
+✅ We xplored database objects, dimensions, and measures  
+✅ We analyze key business metrics using SQL  
 
-🔜 **Next Steps:** After mastering EDA, I'll apply advanced SQL techniques to answer complex business questions and generate reports for stakeholders.  
+🔜 **Next Steps:** After EDA, we'll apply advanced SQL techniques to answer complex business questions and generate reports for stakeholders.  
 
 ---
 
 ## 📁 Project Material  
 
-📌 We reuse data from the previous project, specifically the **gold layer**, no additional setup is required!  
+📌 We reuse data from the previous project ([DWH Project](https://github.com/StefanoN98/SQL-Projects/tree/06aee2d53e71eb27d893c442388b04e8bc5889e7/01.%20DATA%20WAREHOUSE%20PROJECT)), specifically the **gold layer**, no additional setup is required!
 
 ---
 
-## 📏 Dimensions & Measures  
-
-📊 **Understanding your dataset starts with identifying Measures & Dimensions**  
+## 📏 Identify Dimensions & Measures  
 
 ✔️ **Dimensions** (Qualitative)  
 - Examples: `Category`, `Product Name`, `Customer ID`  
@@ -37,7 +35,6 @@
 - Examples: `Sales Amount`, `Revenue`, `Age`  
 - Used for numerical aggregation (SUM, AVG, COUNT)  
 
-👉 This classification is crucial because **analysis is always grouped by dimensions, while measures answer "how much?" questions.**  
 
 ---
 
