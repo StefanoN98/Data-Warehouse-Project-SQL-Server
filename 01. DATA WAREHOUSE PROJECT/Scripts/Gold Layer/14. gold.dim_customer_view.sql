@@ -204,7 +204,7 @@ IF OBJECT_ID('gold.dim_customer', 'V') IS NOT NULL
     DROP VIEW gold.dim_customer;
 GO
 CREATE VIEW gold.dim_customer AS
-		SELECT ROW_NUMBER() OVER (ORDER BY cst_id) AS customer_key,
+		SELECT ROW_NUMBER() OVER (ORDER BY cst_id) AS customer_key, --surrogate key
 			   ci.cst_id AS customer_id,
 			   ci.cst_key AS customer_number,
 			   ci.cst_firstname AS first_name,
