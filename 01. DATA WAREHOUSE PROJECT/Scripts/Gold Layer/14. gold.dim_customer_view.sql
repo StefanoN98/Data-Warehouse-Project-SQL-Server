@@ -200,6 +200,9 @@ DDL Script: Create Gold Views --> Create Dimension: gold.dim_customer
 -------------------------------------------------------------------------------------
 
 --Step 8 : Create the object
+IF OBJECT_ID('gold.dim_customer', 'V') IS NOT NULL
+    DROP VIEW gold.dim_customer;
+GO
 CREATE VIEW gold.dim_customer AS
 		SELECT ROW_NUMBER() OVER (ORDER BY cst_id) AS customer_key,
 			   ci.cst_id AS customer_id,
@@ -219,6 +222,7 @@ CREATE VIEW gold.dim_customer AS
 		ON ci.cst_key = ca.cid
 		LEFT JOIN silver.erp_loc_a101 AS la
 		ON ci.cst_key = la.cid
+GO
 
 -------------------------------------------------------------------------------------
 
