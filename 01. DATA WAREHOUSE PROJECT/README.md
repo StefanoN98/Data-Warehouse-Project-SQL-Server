@@ -19,7 +19,7 @@ This project focuses on building a Data Warehouse (DWH) using SQL Server, implem
 
 The project adheres to the Medallion Architecture, which consists of three layers:
 
-![Image Alt](https://github.com/StefanoN98/Data-Warehouse-Project-SQL-Server/blob/main/Docs/DWH%20Architecture%20.png?raw=true)
+![Image Alt](https://github.com/StefanoN98/SQL-Projects/blob/bfb6fddf33b55684ca873048f80aa5bb69c7cd97/01.%20DATA%20WAREHOUSE%20PROJECT/Docs/DWH%20Architecture%20.png)
 
 
 ### 🟤 1. Bronze Layer (Raw Data)
@@ -51,8 +51,7 @@ The project adheres to the Medallion Architecture, which consists of three layer
 
 During the ETL process I retrieved data from the source loading directly in the bronze layer as table, then I applied various transformation and load in the silver layer always as table and to conclude I create view in the gold layer identifying dim and fact.
 
-![Image Alt](https://github.com/StefanoN98/Data-Warehouse-Project-SQL-Server/blob/main/Docs/Data%20Flow%20Diagram%20.png?raw=true
-)
+![Image Alt](https://github.com/StefanoN98/SQL-Projects/blob/bfb6fddf33b55684ca873048f80aa5bb69c7cd97/01.%20DATA%20WAREHOUSE%20PROJECT/Docs/Data%20Flow%20Diagram%20.png)
 
 ---
 
