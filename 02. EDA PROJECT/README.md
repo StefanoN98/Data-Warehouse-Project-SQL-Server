@@ -11,7 +11,7 @@
 
 📌 **Exploratory Data Analysis (EDA)** is the process of understanding a dataset and extracting insights by analyzing its structure, patterns, and relationships.  
 
-📊 **In this project::**  
+📊 **In this project:**  
 ✅ Explored database objects, dimensions, and measures  
 ✅ Analyze key business metrics using SQL  
 
