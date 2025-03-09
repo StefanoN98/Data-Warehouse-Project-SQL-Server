@@ -211,8 +211,7 @@ CREATE VIEW gold.dim_customer AS
 			   ci.cst_lastname AS last_name,
 			   la.cntry as country,
 			   ci.cst_marital_status AS marital_status,
-			   ci.cst_gndr,
-					CASE WHEN ci.cst_gndr!= 'n/a' THEN ci.cst_gndr  --crm is the master for gender info
+			         	CASE WHEN ci.cst_gndr!= 'n/a' THEN ci.cst_gndr  --crm is the master for gender info
 						 ELSE COALESCE(ca.gen,'n/a')
 					END AS gender,
 			   ca.bdate AS birthdate,
