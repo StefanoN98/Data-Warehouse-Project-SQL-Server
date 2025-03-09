@@ -66,7 +66,7 @@ IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
 GO
 	CREATE VIEW gold.fact_sales AS
 	SELECT sd.sls_ord_num AS order_number,
-		   pr.product_number, --that replace sd.sls_prd_key
+		   pr.product_key, --that replace sd.sls_prd_key
 		   cu.customer_id, --that replace sd.sls_cust_id
 		   sd.sls_order_dt AS order_date,
 		   sd.sls_ship_dt AS shipping_date,
