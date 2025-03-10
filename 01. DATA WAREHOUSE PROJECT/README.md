@@ -57,7 +57,7 @@ During the ETL process:
 
 After identifying **dimension and fact objects**, relationships are established using **surrogate keys**.
 
-![Star Schema](https://github.com/StefanoN98/Data-Warehouse-Project-SQL-Server/blob/dee6e94f1c0d899b7fbfbf42e00a1d08eea6d1f8/Docs/Star%20Schema%20Gold%20Layer.png)
+![Star Schema](https://github.com/StefanoN98/SQL-Projects/blob/d4a874eb53ffb80c71ba649ba51c3acb383c722c/01.%20DATA%20WAREHOUSE%20PROJECT/Docs/Star%20Schema%20Gold%20Layer.png)
 
 ---
 
