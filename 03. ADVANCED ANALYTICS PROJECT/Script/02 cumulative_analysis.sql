@@ -16,7 +16,7 @@ SQL Functions Used:
 --1) RUNNING TOTAL - default frame
 	-- Month case
 		WITH cte AS(
-			SELECT DATETRUNC(month, order_date) AS order_date,
+			SELECT DATETRUNC(month, order_date) AS order_date, --month level
 				   SUM(sales_amount) as total_sales
 			FROM gold.fact_sales
 			WHERE order_date IS NOT NULL
@@ -29,7 +29,7 @@ SQL Functions Used:
 
 	-- Year case
 		WITH cte AS(
-			SELECT DATETRUNC(year, order_date) AS order_date,
+			SELECT DATETRUNC(year, order_date) AS order_date, --year level
 				   SUM(sales_amount) as total_sales
 			FROM gold.fact_sales
 			WHERE order_date IS NOT NULL
@@ -43,7 +43,7 @@ SQL Functions Used:
 
 --2) RUNNING TOTAL - year frame
 	WITH cte AS(
-		SELECT DATETRUNC(month, order_date) AS order_date,
+		SELECT DATETRUNC(month, order_date) AS order_date, --month level
 			   SUM(sales_amount) as total_sales
 		FROM gold.fact_sales
 		WHERE order_date IS NOT NULL
@@ -51,14 +51,14 @@ SQL Functions Used:
 		)
 
 		SELECT *,
-			SUM(cte.total_sales) OVER (PARTITION BY YEAR(order_date) ORDER BY cte.order_date) AS running_total
+			SUM(cte.total_sales) OVER (PARTITION BY YEAR(order_date) ORDER BY cte.order_date) AS running_total --partition per year
 		FROM cte
 
 --3) Add MOVING AVERAGE on the price
 	WITH cte AS(
 			SELECT DATETRUNC(year, order_date) AS order_date,
 				   SUM(sales_amount) AS total_sales,
-				   AVG(price) AS avg_price
+				   AVG(price) AS avg_price  --introduce average price
 			FROM gold.fact_sales
 			WHERE order_date IS NOT NULL
 			GROUP BY DATETRUNC(year, order_date)
@@ -66,5 +66,5 @@ SQL Functions Used:
 
 	SELECT *,
 		SUM(cte.total_sales) OVER (ORDER BY cte.order_date) AS running_total,
-	    AVG(cte.avg_price) OVER (ORDER BY cte.order_date) AS moving_average
+	    AVG(cte.avg_price) OVER (ORDER BY cte.order_date) AS moving_average  --add moving average
     FROM cte
