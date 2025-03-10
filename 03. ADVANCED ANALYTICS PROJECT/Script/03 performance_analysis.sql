@@ -97,7 +97,8 @@ SQL Functions Used:
 		FROM monthly_product_sales AS m
 		ORDER BY m.min_order_date, m.product_name;
 
-		--But let's see a more robust solution using YEAR and MONTH columns separately
+
+	--But let's see a more robust solution using YEAR and MONTH columns separately
 		WITH monthly_product_sales AS (
 			SELECT 
 				YEAR(f.order_date) AS year_,
