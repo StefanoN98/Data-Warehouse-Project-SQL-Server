@@ -4,6 +4,10 @@
 
 This repository presents a complete **SQL-based Data Analytics Pipeline**, progressing from **Data Warehousing** to **Exploratory Data Analysis (EDA)** and finally to **Advanced Analytics**. The goal is to create a structured, efficient, and insightful SQL-driven analytical workflow.
 
+![SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Draw.io](https://img.shields.io/badge/Draw.io-FF9900?style=for-the-badge&logo=diagramsdotnet&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
 ---
 
 ## 🔄 **Project Workflow**
